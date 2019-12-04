@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AA</title>
+</head>
+<body>
+<h1>Head</h1>
+<br>
+<h2>kek</h2>
+{% for post in posts %}
+    {{ post.id }}: {{ post.text }}
+    <br>
+{% endfor %}
+<hr>
+<form action="/add/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
